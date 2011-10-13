@@ -4,9 +4,7 @@ include tomcat::source
 include apache
 include java
 $tomcat_version = "6.0.18"
-apache::module {"proxy_ajp":
-  ensure  => present,
-}
+include apache::mod_proxy
 
 apache::vhost {"repo.analytical-labs.com":
   ensure => present,
