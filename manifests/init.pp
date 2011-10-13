@@ -13,6 +13,7 @@ apache::vhost {"repo.analytical-labs.com":
 tomcat::instance {"repo":
   ensure      => present,
   ajp_port    => "8010",
+  http_port	  => "8081",
 }
 
 apache::proxypass {"repo":
