@@ -12,14 +12,14 @@ apache::vhost {"repo.analytical-labs.com":
 
 tomcat::instance {"repo":
   ensure      => present,
-  ajp_port    => "8009",
+  ajp_port    => "8010",
 }
 
 apache::proxypass {"repo":
   ensure   => present,
   location => "/",
   vhost    => "repo.analytical-labs.com",
-  url      => "ajp://localhost:8009/",
+  url      => "ajp://localhost:8010/",
 }
 
 file { "/home/tomcat":
