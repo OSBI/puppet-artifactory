@@ -1,4 +1,4 @@
-class jenkins {
+class artifactory {
 
 include tomcat::source
 include apache
