@@ -14,6 +14,7 @@ tomcat::instance {"repo":
   ensure      => present,
   ajp_port    => "8010",
   http_port	  => "8081",
+  server_port => "8006",
 }
 
 apache::proxypass {"repo":
