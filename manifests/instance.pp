@@ -1,24 +1,26 @@
+# Definition: artifactory::instance
 #
-# artifactoryinstance.pp
-# 
-# Copyright (c) 2011, OSBI Ltd. All rights reserved.
+# This module creates an artifactory tomcat server and configures apache.
 #
-# This library is free software; you can redistribute it and/or
-# modify it under the terms of the GNU Lesser General Public
-# License as published by the Free Software Foundation; either
-# version 2.1 of the License, or (at your option) any later version.
+# Parameters:
+# ensure
+# artifactory_url
+# artifactory_ajp
+# artifactory_http
+# artifactory_server
 #
-# This library is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-# Lesser General Public License for more details.
+# Actions:
 #
-# You should have received a copy of the GNU Lesser General Public
-# License along with this library; if not, write to the Free Software
-# Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
-# MA 02110-1301  USA
+# Requires:
 #
-
+# Sample Usage:
+# 	artifactory::instance {
+#		"repo" :
+#			ensure => present,
+#			artifactory_ajp => $artifactory_ajp,
+#			artifactory_http => $artifactory_http,
+#			artifactory_server => $artifactory_server,
+#	}
 define artifactory::instance($ensure, $artifactory_url = 'repo.analytical-labs.com', $artifactory_ajp, $artifactory_http, $artifactory_server) {
 
   include tomcat::source
