@@ -10,8 +10,8 @@
   "checksums": {
     "Modulefile": "9a2b084d3651c5c840c1dc2c9e2ff4f7",
     "README": "d41d8cd98f00b204e9800998ecf8427e",
-    "manifests/artifactoryinstance.pp": "17e2e2602beb765021be21f95903351d",
     "manifests/init.pp": "dc61cb72683a8953082508a689b5e474",
+    "manifests/instance.pp": "17e2e2602beb765021be21f95903351d",
     "spec/spec.opts": "a600ded995d948e393fbe2320ba8e51c",
     "spec/spec_helper.rb": "ca19ec4f451ebc7fdb035b52eae6e909",
     "tests/init.pp": "9793fe279ce2a4821912d49e82586fc0"
